@@ -16,6 +16,6 @@ int main() {
     Matrix matrix;
     //matrix.buildDiagonalMatrix(vector, vectorSize);
     matrix.buildSpiralMatrix(vector, vectorSize);
-    matrix.dispay(vector);
+    matrix.display(vector);
     return 0;
 }

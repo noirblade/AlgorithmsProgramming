@@ -13,11 +13,9 @@ namespace noirblade {
     class Matrix {
 
     public:
-        Matrix();
-        virtual ~Matrix();
         void buildDiagonalMatrix(int matrix[][5], int matrixSize);
         void buildSpiralMatrix(int matrix[][5], int matrixSize);
-        void dispay(int matrix[][5]);
+        void display(int matrix[][5]);
     };
 
 }
