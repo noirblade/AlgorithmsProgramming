@@ -14,8 +14,8 @@ namespace noirblade {
 
     public:
         void buildDiagonalMatrix(int matrix[][5], int matrixSize);
-        void buildSpiralMatrix(int matrix[][5], int matrixSize);
-        void display(int matrix[][5]);
+        void buildSpiralMatrix(unsigned int matrix[][5], int matrixSize);
+        void display(unsigned int matrix[][5]);
     };
 
 }

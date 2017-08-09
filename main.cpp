@@ -5,7 +5,7 @@ using namespace noirblade;
 int main() {
     int vectorSize = 5;
 
-    int vector[5][5] = {
+    unsigned int vector[5][5] = {
             {0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0},
