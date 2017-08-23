@@ -28,20 +28,58 @@ namespace noirblade{
     }
 
     void Matrix::buildSpiralMatrix(unsigned int matrix[][5], int matrixSize){
-        unsigned int i = 0, j = 0;
+        unsigned int i = 0;
         unsigned int value = 1;
+        int startX = 0;
+        int startY = -1;
+        int direction = 0;
+        int leftOffset = matrixSize-1;
+        int bottomOffset = matrixSize-1;
+        int rightOffset = 0;
+        int topOffset = 1;
 
+        for (i; i < matrixSize*matrixSize; i++){
 
-        int maxValue = 10; // matrixSize*matrixSize;
-        while (value <= maxValue){
-
-            if (j < 5){
-                matrix[j][i] = value;
-            } else {
-                matrix[i][j] = value;
+            if (direction == 0){
+                startY++;
             }
-            j++;
+
+            if (direction == 1){
+                startX++;
+            }
+
+            if (direction == 2){
+                startY--;
+            }
+
+            if (direction == 3){
+                startX--;
+            }
+
+            matrix[startY][startX] = value;
             value++;
+
+            if (direction == 0 && startY >= leftOffset){
+                leftOffset--;
+                direction = 1;
+            }
+
+            if (direction == 1 && startX >= bottomOffset){
+                bottomOffset--;
+                direction = 2;
+            }
+
+            if (direction == 2 && startY == rightOffset){
+                rightOffset++;
+                direction = 3;
+            }
+
+            if (direction == 3 && startX == topOffset){
+                topOffset++;
+                direction = 0;
+            }
+
+
         }
     }
 
