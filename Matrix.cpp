@@ -27,9 +27,9 @@ namespace noirblade{
         }
     }
 
-    void Matrix::buildSpiralMatrix(unsigned int matrix[][5], int matrixSize){
-        unsigned int i = 0;
-        unsigned int value = 1;
+    void Matrix::buildSpiralMatrix(int matrix[][5], int matrixSize){
+        int i = 0;
+        int value = 1;
         int startX = 0;
         int startY = -1;
         int direction = 0;
@@ -78,12 +78,10 @@ namespace noirblade{
                 topOffset++;
                 direction = 0;
             }
-
-
         }
     }
 
-    void Matrix::display(unsigned int matrix[][5]){
+    void Matrix::display(int matrix[][5]){
         int counter = 0;
         for (int n = 0; n < 5; n++) {
             for (int p = 0; p < 5; p++) {
